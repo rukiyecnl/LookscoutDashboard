@@ -25,6 +25,7 @@ export default function SideBarIcons() {
   }, []);
   let count = 0;
   const [IsActive, setIsActive] = useState(false);
+  const [displayStatus, setDisplayStatus] = useState("d-flex");
   const handleClick = (e) => {
     setIconId(e.target.id);
     
@@ -36,35 +37,35 @@ export default function SideBarIcons() {
     if (count > 1) {
         setIsActive(false);
     }
+    setDisplayStatus("d-flex");
 
   }
 
-  const [displayStatus, setDisplayStatus] = useState("d-flex");
   const handleContentBtn = () => {
-      const status = displayStatus == "d-flex" ?  "d-none" : "d-flex";
-      setDisplayStatus(status);
+    //   const status = displayStatus == "d-flex" ?  "d-none" : "d-flex";
+      setDisplayStatus("d-none");
   }
 
 
   return (
 <div className="d-flex flex-column h-100 " style={{maxWidth:"100%"}}>
     <div className="d-flex h-100 " >
-        <div className='d-flex align-items-center flex-column justify-content-between side-bar-content px-2' style={{paddingBlock:"18px"}}>
+        <div className='d-flex align-items-center flex-column justify-content-between side-bar-content px-3' style={{paddingBlock:"18px"}}>
             <div className="nav flex-column nav-pills  " style={{"gap":"16px"}} id="" role="tablist" aria-orientation="vertical">
                 <button className={IsActive ? `nav-link active` : `nav-link`} id="1" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" onClick={(e) => handleClick(e)} >
                     <img id='1' src="./logo.png" className='iconImage' alt="logo"  />
                 </button>
                 <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                    <img id='2' src="./search.png" className='iconImage' alt="logo" onClick={(e) => setIconId(e.target.id)} />
+                    <img id='2' src="./search.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)} />
                 </button>
                 <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-profile2" type="button" role="tab" aria-controls="v-pills-profile2" aria-selected="false">
-                    <img id='3' src="./horizontal.png" className='iconImage' alt="logo" onClick={(e) => setIconId(e.target.id)} />
+                    <img id='3' src="./horizontal.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)} />
                 </button>
                 <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                    <img id='4' src="./calendar.png" className='iconImage' alt="logo"  onClick={(e) => setIconId(e.target.id)}/>
+                    <img id='4' src="./calendar.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)}/>
                 </button>
                 <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                    <img id='5' src="./alt.png" className='iconImage' alt="logo" onClick={(e) => setIconId(e.target.id)} />
+                    <img id='5' src="./alt.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)} />
                 </button>
             </div>
             <div className='d-flex flex-column' style={{"gap":"16px"}}>

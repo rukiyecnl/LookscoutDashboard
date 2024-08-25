@@ -15,7 +15,7 @@ export default function SideBarContent({ iconId, displayStatus, handleContentBtn
     return (
         <div className={`${displayStatus} flex-column justify-content-between side-bar-content side-bar-special`} id="v-pills-tabContent" >
             <div>
-                <div className="d-flex align-items-center gap-2" onClick={handleContentBtn}>
+                <div className="d-flex align-items-center gap-2" onClick={handleContentBtn} style={{cursor:"pointer"}}>
                     <img style={{"width": "11px", "height": "10px"}} src="./arrow.png"  alt="arrow" />
                     <p className="lookscoutTitle">Lookscout Dashboard</p>
                 </div>
