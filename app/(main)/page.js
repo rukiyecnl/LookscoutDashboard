@@ -15,9 +15,7 @@ export default function Home() {
 
 
   useEffect(() => {
-    // window veya document kullanmadan önce kontrol yapıyoruz
-    if (typeof window !== "undefined" && typeof document !== "undefined") {
-      
+    if (typeof window !== "undefined") {
       document.body.className = theme;
 
       const handleResize = () => {
@@ -28,16 +26,16 @@ export default function Home() {
         }
       };
 
-      // Component ilk yüklendiğinde boyutu kontrol et
-      handleResize();
+      handleResize(); // Component ilk yüklendiğinde boyutu kontrol et
 
-      // Tarayıcı boyutu değiştikçe kontrol etmeye devam et
       window.addEventListener("resize", handleResize);
 
-      // Cleanup event listener'ı kaldırır
-      return () => window.removeEventListener("resize", handleResize);
+      return () => {
+        window.removeEventListener("resize", handleResize);
+      };
     }
-  }, []);
+  }, [theme]);
+
 
 
   return (
