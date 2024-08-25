@@ -13,30 +13,31 @@ export default function Home() {
   const {theme, setTheme} = UseTheme();
   const [displayStatus, setDisplayStatus] = useState("d-none");
 
+
   useEffect(() => {
-    
-    setTheme("light-mode");
-    document.body.className = theme; 
+    // window veya document kullanmadan önce kontrol yapıyoruz
+    if (typeof window !== "undefined" && typeof document !== "undefined") {
+      
+      document.body.className = theme;
 
+      const handleResize = () => {
+        if (window.innerWidth <= 990) {
+          setDisplayStatus("d-none");
+        } else {
+          setDisplayStatus("d-flex");
+        }
+      };
 
-    const handleResize = () => {
-      if (window.innerWidth <= 990) {
-        setDisplayStatus("d-none");
-      } else {
-        setDisplayStatus("d-flex"); // Eğer d-none yerine başka bir değer kullanmak istiyorsanız burayı ayarlayın
-      }
-    };
+      // Component ilk yüklendiğinde boyutu kontrol et
+      handleResize();
 
-    // Component ilk yüklendiğinde boyutu kontrol et
-    handleResize();
+      // Tarayıcı boyutu değiştikçe kontrol etmeye devam et
+      window.addEventListener("resize", handleResize);
 
-    // Tarayıcı boyutu değiştikçe kontrol etmeye devam et
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup event listener'ı kaldırır
-    return () => window.removeEventListener("resize", handleResize);
-
-  }, []);
+      // Cleanup event listener'ı kaldırır
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, [theme]);
 
 
   return (
