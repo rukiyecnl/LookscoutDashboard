@@ -7,6 +7,7 @@ import StatusCard from "./StatusCard";
 import Link from "next/link";
 import { useState } from "react";
 import ThemeBtn from "./ThemeBtn";
+import HamburgerNavbar from "./HamburgerNavbar";
 
 // Dinamik import
 const BarChart = dynamic(() => import('./BarCharts'), { ssr: false });
@@ -24,6 +25,7 @@ export default function Content(){
 
     return(
         <div className="mx-3" style={{paddingBlock:"28px"}}>
+            {/* <HamburgerNavbar/> */}
             <div className="content-head-top d-flex justify-content-between">
                 <p className="d-sm-flex d-none">
                     <span>Home</span> {">"}

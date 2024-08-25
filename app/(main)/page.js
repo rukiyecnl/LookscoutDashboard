@@ -5,15 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // JavaScript bileşenlerini (dropdowns, modals, tooltips, vb.) kullanma
 
 import Content from "../components/Content";
+import SideBarContent from "../components/SideBarContent";
 
 export default function Home() {
   return (
     <div className="container-custom">
-      <div className="row ">
-        <div className="d-none d-xl-flex col-xxl-3 col-xl-4" >
+      <div className="d-flex">
+        <div className="d-none d-lg-flex" >
           <SideBarIcons />
         </div>
-        <div className="col-12 col-xxl-9 col-xl-8" >
+        <div className="flex-grow-1 w-100" >
           <Content />
         </div>
       </div>

@@ -1,6 +1,7 @@
 import data from "@/data/data.json"; // JSON dosyasını import edin
 
-export default function SideBarContent({ iconId }) {
+
+export default function SideBarContent({ iconId, displayStatus, handleContentBtn}) {
     // iconId ile eşleşen veriyi bulun
     const contentData = data.find(d => d.id == iconId);
     // console.log(contentData);
@@ -9,10 +10,12 @@ export default function SideBarContent({ iconId }) {
         return <div>Content not found</div>;
     }
 
+
+
     return (
-        <div className="d-flex flex-column justify-content-between side-bar-content side-bar-special" id="v-pills-tabContent" >
+        <div className={`${displayStatus} flex-column justify-content-between side-bar-content side-bar-special`} id="v-pills-tabContent" >
             <div>
-                <div className="d-flex align-items-center gap-2">
+                <div className="d-flex align-items-center gap-2" onClick={handleContentBtn}>
                     <img style={{"width": "11px", "height": "10px"}} src="./arrow.png"  alt="arrow" />
                     <p className="lookscoutTitle">Lookscout Dashboard</p>
                 </div>

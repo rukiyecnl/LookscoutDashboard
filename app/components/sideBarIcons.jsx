@@ -39,6 +39,12 @@ export default function SideBarIcons() {
 
   }
 
+  const [displayStatus, setDisplayStatus] = useState("d-flex");
+  const handleContentBtn = () => {
+      const status = displayStatus == "d-flex" ?  "d-none" : "d-flex";
+      setDisplayStatus(status);
+  }
+
 
   return (
 <div className="d-flex flex-column h-100 " style={{maxWidth:"100%"}}>
@@ -68,7 +74,7 @@ export default function SideBarIcons() {
             </div>
 
         </div>
-        <SideBarContent iconId = {iconId} />
+        <SideBarContent iconId = {iconId} displayStatus={displayStatus} handleContentBtn={handleContentBtn} />
 
     </div>
 
