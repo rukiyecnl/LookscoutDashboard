@@ -1,5 +1,5 @@
 import data from "@/data/data.json"; // JSON dosyasını import edin
-
+import "../customCss/custom.css";
 
 export default function SideBarContent({ iconId, displayStatus, handleContentBtn}) {
     // iconId ile eşleşen veriyi bulun
@@ -20,8 +20,8 @@ export default function SideBarContent({ iconId, displayStatus, handleContentBtn
                     <p className="lookscoutTitle">Lookscout Dashboard</p>
                 </div>
                 <div>
-                    <form className=" w-100">
-                        <input className="search-form-input w-100" type="text" placeholder="Search here..." style={{marginBlock:"32px"}}/>
+                    <form className="w-100">
+                        <input className="w-100" type="text" placeholder="Search here..." style={{marginBlock:"32px", padding:"10px 12px 10px 12px", borderRadius:"5px", border: "2px solid var(--border-color)", backgroundColor:"var(--btn-color-bg)"}}/>
                     </form>
                 </div>
                 <div>
