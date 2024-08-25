@@ -1,0 +1,112 @@
+[
+    {
+        "id": 1,
+        "title": "Lookscout Team",
+        "values": [
+            {
+                "img": "./Limg1.png",
+                "title": "Latoya Langosh",
+                "sub": "Dynamic",
+                "status": "Online"
+            },
+            {
+                "img": "./Limg2.png",
+                "title": "Abel Mohr",
+                "sub": "Dynamic",
+                "status": "Online"
+            },
+            {
+                "img": "./Limg3.png",
+                "title": "Shari Stamm",
+                "sub": "Chief",
+                "status": "Offline"
+            },
+            {
+                "img": "./Limg4.png",
+                "title": "Earl Johnson",
+                "sub": "National",
+                "status": "Offline"
+            },
+            {
+                "img": "./Limg5.png",
+                "title": "Erick Champlin",
+                "sub": "Central",
+                "status": "Online"
+            }
+
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Updated Materials",
+        "values": [
+            {
+                "img": "./Uimg11.png",
+                "title": "Lookscout Resources",
+                "sub": "80.69 mb",
+                "statusImg": "./download.png"
+            },
+            {
+                "img": "./Uimg2.png",
+                "title": "Lookscout Updates",
+                "sub": "320.32 mb",
+                "statusImg": "./download.png"
+            },
+            {
+                "img": "./Uimg11.png",
+                "title": "Lookscout Guides",
+                "sub": "320.32 mb",
+                "statusImg": "./altigen.png"
+            },
+            {
+                "img": "./Uimg4.png",
+                "title": "Lookscout Design System",
+                "sub": "320.32 mb",
+                "statusImg": "./altigen.png"
+            },
+            {
+                "img": "./Uimg2.png",
+                "title": "Lookscout Guides",
+                "sub": "125.05 mb",
+                "statusImg": "./download.png"
+            }
+
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Lookscout Team",
+        "values": [
+            {
+                "img": "./Rimg1.png",
+                "title": "Pinterest Team",
+                "sub": "Jan 23 2022",
+                "status": "Done"
+            },
+            {
+                "img": "./Rimg2.png",
+                "title": "Skecth Team",
+                "sub": "Jun 15 2022",
+                "status": "Failed"
+            },
+            {
+                "img": "./Rimg3.png",
+                "title": "Gitlab Team",
+                "sub": "Jan 15 2022",
+                "status": "Done"
+            },
+            {
+                "img": "./Rimg4.png",
+                "title": "Clickup",
+                "sub": "Jan 15 2022",
+                "status": "Failed"
+            },
+            {
+                "img": "./Rimg5.png",
+                "title": "Deliverooo",
+                "sub": "Jan 15 2022",
+                "status": "Done"
+            }
+        ]
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"Revenue",
+        "price":390,
+        "type":"new",
+        "text": "monthly growth",
+        "img": "./revenue.png"
+    },
+    {
+        "id":2,
+        "name":"Expenses",
+        "price":680,
+        "type":"global",
+        "text": "monthly growth",
+        "img": "./expenses.png"
+    },
+    {
+        "id":3,
+        "name":"Expenses",
+        "price":680,
+        "type":"intuitive",
+        "text": "monthly growth",
+        "img": "./expensesIN.png"
+    }
+]

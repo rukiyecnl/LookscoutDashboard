@@ -1,0 +1,54 @@
+// styles/custom-bootstrap.scss
+@import "bootstrap/scss/bootstrap";
+
+// styles/themes.scss
+
+:root {
+    --bs-body-bg: #f8f9fa;
+    --side-bar-bg: #fff;
+    --border-color: #EAEBF0;
+    --text-color: #5F6D7E;
+    --title-color: #272D37;
+    --btn-color-bg: #fff;
+    --btn-text-color: #000;
+    --btn-status-bg: #F5FAFF;
+    --btn-status-color: #437EF7;
+    --btn-status-global-bg: #FFF2F0;
+    --btn-status-global-color: #E2341D;
+
+  }
+  
+  .light-mode {
+    --bs-body-bg: #f8f9fa;
+    --side-bar-bg: #fff;
+    --border-color: #EAEBF0;
+    --text-color: #5F6D7E;
+    --title-color: #272D37;
+    --btn-color-bg: #fff;
+    --btn-text-color: #000;
+    --btn-status-new-bg: #F5FAFF;
+    --btn-status-new-color: #437EF7;
+    --btn-status-global-bg: #FFF2F0;
+    --btn-status-global-color: #E2341D;
+
+  }
+  
+  .dark-mode {
+    --bs-body-bg: #1C2534;
+    --side-bar-bg: #20293b;
+    --border-color: #2E3545;
+    --text-color: #A5ACBA;
+    --title-color: #fff;
+    --btn-color-bg: #2C3444;
+    --btn-text-color: #fff;
+    --btn-status-new-bg: #437EF7;
+    --btn-status-new-color: #F5FAFF;
+    --btn-status-global-bg: #E2341D;
+    --btn-status-global-color: #FFF2F0;
+    
+  }
+  
+  body {
+    background-color: var(--bs-body-bg);
+  }
+  

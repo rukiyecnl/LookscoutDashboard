@@ -1,0 +1,165 @@
+[
+    {
+        "id": "1",
+        "name": "horizontal",
+        "values": [
+            {
+                "val":"General",
+                "img":"./horizontalBlack.png"
+            },
+            {
+                "val":"Messages",
+                "img":"./message.png"
+            },
+            {
+                "val":"Notification",
+                "img":"./alarm.png"
+            },
+            {
+                "val":"Users",
+                "img":"./circle.png"
+            },
+            {
+                "val":"Events & Logs",
+                "img":"./star.png"
+            },
+            {
+                "val":"Organization",
+                "img":"./bank.png"
+            },
+            {
+                "val":"Teams",
+                "img":"./teams.png"
+            }
+        ],
+        "classValues": "tab-pane fade",
+        "idValues": "v-pills-home",
+        "role": "tabpanel",
+        "ariaLabelledby": "v-pills-home-tab",
+        "tabIndex": 0,
+        "img": "./horizontalBlack.png"
+    },
+    {
+        "id": "2",
+        "name": "horizontal",
+        "values": [
+            {
+                "val":"Messages",
+                "img":"./message.png"
+            },
+            {
+                "val":"Notification",
+                "img":"./alarm.png"
+            },
+            {
+                "val":"Users",
+                "img":"./circle.png"
+            },
+            {
+                "val":"Events & Logs",
+                "img":"./star.png"
+            },
+            {
+                "val":"Organization",
+                "img":"./bank.png"
+            },
+            {
+                "val":"Teams",
+                "img":"./teams.png"
+            }
+        ],
+        "classValues": "tab-pane fade",
+        "idValues": "v-pills-profile",
+        "role": "tabpanel",
+        "ariaLabelledby": "v-pills-profile-tab",   
+        "tabIndex": 0
+    },     {
+        "id": "3",
+        "name": "horizontal",
+        "values": [
+            {
+                "val":"Notification",
+                "img":"./alarm.png"
+            },
+            {
+                "val":"Users",
+                "img":"./circle.png"
+            },
+            {
+                "val":"Events & Logs",
+                "img":"./star.png"
+            },
+            {
+                "val":"Organization",
+                "img":"./bank.png"
+            },
+            {
+                "val":"Teams",
+                "img":"./teams.png"
+            }
+        ],
+        "classValues": "tab-pane fade",
+        "idValues": "v-pills-profile2",
+        "role": "tabpanel",
+        "ariaLabelledby": "v-pills-profile2-tab",
+        "tabIndex": 0
+    },
+    {
+        "id": "4",
+        "name": "horizontal",
+        "values": [
+            {
+                "val":"Users",
+                "img":"./circle.png"
+            },
+            {
+                "val":"Events & Logs",
+                "img":"./star.png"
+            },
+            {
+                "val":"Organization",
+                "img":"./bank.png"
+            },
+            {
+                "val":"Teams",
+                "img":"./teams.png"
+            }
+        ],
+        "classValues": "tab-pane fade",
+        "idValues": "v-pills-profile2",
+        "role": "tabpanel",
+        "ariaLabelledby": "v-pills-profile2-tab",
+        "tabIndex": 0
+    },
+    {
+        "id": "5",
+        "name": "horizontal",
+        "values": [
+            {
+                "val":"General",
+                "img":"./horizontalBlack.png"
+            },
+            {
+                "val":"Messages",
+                "img":"./message.png"
+            },
+            {
+                "val":"Notification",
+                "img":"./alarm.png"
+            },
+            {
+                "val":"Users",
+                "img":"./circle.png"
+            },
+            {
+                "val":"Events & Logs",
+                "img":"./star.png"
+            }
+        ],
+        "classValues": "tab-pane fade",
+        "idValues": "v-pills-profile2",
+        "role": "tabpanel",
+        "ariaLabelledby": "v-pills-profile2-tab",
+        "tabIndex": 0
+    }
+]
