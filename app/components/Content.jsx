@@ -1,7 +1,7 @@
 "use client"
 // import BarChart from "./BarCharts";
 import Btns from "./Btns";
-import Card from "./card";
+import Card from "./Card";
 import dynamic from 'next/dynamic';
 import StatusCard from "./StatusCard";
 import Link from "next/link";
