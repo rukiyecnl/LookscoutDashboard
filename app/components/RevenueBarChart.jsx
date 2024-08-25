@@ -6,7 +6,7 @@ import Chart from 'react-apexcharts';
 import Link from 'next/link';
 
 // ApexCharts'ı tarayıcı tarafında yüklemek için kullanılır
-export default function RevenueBarChart({theme}){
+export default function RevenueBarChart(){
   const [chartOptions, setChartOptions] = useState(null);
 
   useEffect(() => {
@@ -35,11 +35,7 @@ export default function RevenueBarChart({theme}){
       }],
       xaxis: {
         categories: ['', '', '', '', '', '', ''],
-        labels: {
-          style: {
-              colors: theme == "light-mode" ? '#000' : '#fff', // Koyu modda açık renk, açık modda koyu renk
-          }
-      }
+
       },
       yaxis: {
         labels: {
@@ -48,9 +44,7 @@ export default function RevenueBarChart({theme}){
             // İstenilen formatta değiştirebilirsiniz
             return ` `;
           },
-          style: {
-            colors: theme == "light-mode" ? '#000' : '#fff', // Koyu modda açık renk, açık modda koyu renk
-          }
+      
         },
         min: 0, // Y ekseninin minimum değeri
         max: 100, // Y ekseninin maksimum değeri

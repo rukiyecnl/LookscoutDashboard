@@ -53,8 +53,8 @@ export default function Content(){
                 <Card />
             </div>
             <div>
-                <BarChart theme={theme}/>
-                <RevenueBarChart theme={theme}/>
+                <BarChart/>
+                <RevenueBarChart/>
             </div>
             <div className="d-xs-block d-md-flex align-items-start justify-content-between mt-3 mt-lg-4 ">
                 <p className="username">Brian Ford</p>

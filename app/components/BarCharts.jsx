@@ -37,7 +37,7 @@ import Chart from 'react-apexcharts';
 import Link from 'next/link';
 
 // ApexCharts'ı tarayıcı tarafında yüklemek için kullanılır
-export default function BarChart({theme}){
+export default function BarChart(){
   const [chartOptions, setChartOptions] = useState(null);
 
   useEffect(() => {
@@ -66,11 +66,7 @@ export default function BarChart({theme}){
       }],
       xaxis: {
         categories: ['Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec', 'Jan', 'Feb', 'Mar'],
-        labels: {
-          style: {
-              colors: theme == "light-mode" ? '#000' : '#fff', // Koyu modda açık renk, açık modda koyu renk
-          }
-      }
+ 
       },
       yaxis: {
         labels: {
@@ -78,9 +74,6 @@ export default function BarChart({theme}){
             // Burada `value` Y eksenindeki değerleri temsil eder.
             // İstenilen formatta değiştirebilirsiniz
             return `${value}%`;
-          },
-          style: {
-            colors: theme == "light-mode" ? '#000' : '#fff', // Koyu modda açık renk, açık modda koyu renk
           }
         },
         min: 0, // Y ekseninin minimum değeri
