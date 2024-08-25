@@ -20,8 +20,8 @@ export default function SideBarContent({ iconId, displayStatus, handleContentBtn
                     <p className="lookscoutTitle">Lookscout Dashboard</p>
                 </div>
                 <div>
-                    <form className="search-form w-100">
-                        <input className="w-100" type="text" placeholder="Search here..." style={{marginBlock:"32px"}}/>
+                    <form className=" w-100">
+                        <input className="search-form-input w-100" type="text" placeholder="Search here..." style={{marginBlock:"32px"}}/>
                     </form>
                 </div>
                 <div>
