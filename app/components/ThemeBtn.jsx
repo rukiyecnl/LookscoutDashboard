@@ -1,7 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { UseTheme } from "../store/context";
 
 export default function ThemeBtn({theme, setTheme}){
     const [side, setSide] = useState("right");
+
+    useEffect(() => {
+        if (typeof document !== "undefined") {
+            document.body.className = theme; 
+        }
+      }, [theme]);
     
     const toggleTheme = (e) => {
         
@@ -13,7 +20,7 @@ export default function ThemeBtn({theme, setTheme}){
         }
         const newTheme = theme === "light-mode" ? "dark-mode" : "light-mode";
         setTheme(newTheme);
-        document.body.className = newTheme; 
+        
         
     }
     return(

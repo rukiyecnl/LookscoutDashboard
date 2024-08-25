@@ -1,10 +1,14 @@
 "use client"
-import SideBarIcons from "../components/sideBarIcons";
+// import SideBarIcons from "../components/sideBarIcons";
+
+import dynamic from "next/dynamic";
 import 'bootstrap/dist/css/bootstrap.min.css';
+const SideBarIcons = dynamic(() => import("../components/sideBarIcons"), { ssr: false });
+const Content = dynamic(() => import("../components/Content"), { ssr: false });
 
 // JavaScript bileşenlerini (dropdowns, modals, tooltips, vb.) kullanma
 
-import Content from "../components/Content";
+// import Content from "../components/Content";
 import SideBarContent from "../components/SideBarContent";
 import { useEffect, useState } from "react";
 import { UseTheme } from "../store/context";
