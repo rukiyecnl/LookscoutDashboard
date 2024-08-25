@@ -39,7 +39,7 @@ export default function Content(){
             <div className="d-sm-block d-md-flex align-items-start justify-content-between mt-3">
                 <div>
                     <p className="hey-title">Hey there, Brian Ford!</p>
-                    <p className="hey-title-desc">Welcome back, we're happy to have you here!</p>
+                    <p className="hey-title-desc">Welcome back, we are happy to have you here!!</p>
                 </div>
                 <div className="btns d-flex gap-3 mt-3 mt-md-0">
                     <Btns btnValue={"Edit section"} btnClass={"btn-normal"}/>
