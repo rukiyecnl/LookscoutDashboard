@@ -3,9 +3,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import "../customCss/custom.css"
 import { useEffect, useState } from 'react';
 import SideBarContent from './SideBarContent';
+import { UseTheme } from '../store/context';
 
 
 export default function SideBarIcons({displayStatus, setDisplayStatus}) {
+    const {theme} = UseTheme();
     const [iconId, setIconId] = useState("1");
   useEffect(() => {
     // Dynamically import Bootstrap's JS to ensure it's loaded
@@ -53,7 +55,7 @@ export default function SideBarIcons({displayStatus, setDisplayStatus}) {
         <div className='d-flex align-items-center flex-column justify-content-between side-bar-content px-3' style={{paddingBlock:"18px"}}>
             <div className="nav flex-column nav-pills  " style={{"gap":"16px"}} id="" role="tablist" aria-orientation="vertical">
                 <button className={IsActive ? `nav-link active` : `nav-link`} id="1" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" onClick={(e) => handleClick(e)} >
-                    <img id='1' src="./logo.png" className='iconImage' alt="logo"  />
+                    <img id='1' src={theme == "light-mode" ? "./logo.png" : "./logoWhite.png"} className='iconImage' alt="logo"  />
                 </button>
                 <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
                     <img id='2' src="./search.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)} />

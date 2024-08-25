@@ -16,8 +16,23 @@ body {
     padding: 12px;
 
 }
+.hamburger-nav {
+    padding-block: 16px;
+    background-color: var(--side-bar-bg);
+}
 .side-bar-content {
     background-color: var(--side-bar-bg);
+
+}
+.search-form {
+    & > input {
+        padding: 10px 12px 10px 12px;
+        gap: 8px;
+        border-radius: 5px ;
+        border: 2px solid var(--border-color);
+        opacity: 0px;
+        background-color: var(--btn-color-bg);
+    }
 
 }
 .side-bar-special {

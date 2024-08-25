@@ -23,13 +23,13 @@ export default function Content(){
     const {theme ,setTheme} = UseTheme();
 
     return(
-        <div className="mx-3" style={{paddingBlock:"28px"}}>
+        <div className="mx-3 py-lg-4 py-0" >
             <HamburgerNavbar/>
             <div className="content-head-top d-flex justify-content-between">
                 <p className="d-sm-flex d-none">
                     <span>Home</span> {">"}
                     <span>Settings</span> {">"}
-                    <span>Genreal</span>
+                    <span>General</span>
                 </p>
                 <div className="d-flex d-sm-none align-items-center gap-3">
                     <img src="./leftArrow.png" alt="left" /> 
