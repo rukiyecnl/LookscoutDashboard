@@ -37,7 +37,7 @@ export default function Home() {
       // Cleanup event listener'ı kaldırır
       return () => window.removeEventListener("resize", handleResize);
     }
-  }, [theme]);
+  }, []);
 
 
   return (
