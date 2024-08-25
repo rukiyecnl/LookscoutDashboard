@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 import ThemeBtn from "./ThemeBtn";
 import HamburgerNavbar from "./HamburgerNavbar";
+import { UseTheme } from "../store/context";
 
 // Dinamik import
 const BarChart = dynamic(() => import('./BarCharts'), { ssr: false });
@@ -19,13 +20,11 @@ export const metadata = {
   };
 
 export default function Content(){
-    const [theme, setTheme] = useState("light-mode");
-
-
+    const {theme ,setTheme} = UseTheme();
 
     return(
         <div className="mx-3" style={{paddingBlock:"28px"}}>
-            {/* <HamburgerNavbar/> */}
+            <HamburgerNavbar/>
             <div className="content-head-top d-flex justify-content-between">
                 <p className="d-sm-flex d-none">
                     <span>Home</span> {">"}
@@ -51,7 +50,7 @@ export default function Content(){
                     </button>
                 </div>
             </div>
-            <div >
+            <div className="w-100">
                 <Card />
             </div>
             <div>
@@ -69,20 +68,20 @@ export default function Content(){
                 </div>
             </div>
             <div className="row  align-items-start ">
-                <div className="col-12 col-md-4 col-sm-6">
+                <div className="col">
                     <StatusCard cardId={"1"} />
                     <div style={{backgroundColor: "var(--side-bar-bg)", paddingInline:"20px"}}>
                         <Btns btnValue={"View all"} btnClass={"btn-prim view-btn"} />
                     </div>
                 </div>
-                <div className="col-12 col-md-4 col-sm-6">
+                <div className="col">
                     <StatusCard cardId={"2"} />
                     <div className="btns d-flex gap-3 w-100 card-btn-bar" style={{backgroundColor: "var(--side-bar-bg)", paddingInline:"20px", paddingBottom:"16px"}}>
                         <Btns btnValue={"Cancel"} btnClass={"btn-normal"}/>
                         <Btns btnValue={"Upload"} btnClass={"btn-prim"}/>
                     </div>
                 </div>
-                <div className="col-12 col-md-4 col-sm-12">
+                <div className="col">
                     <StatusCard cardId={"3"} />
                     <Link href={"/"} className='d-flex gap-1 align-items-center' style={{backgroundColor: "var(--side-bar-bg)", paddingInline:"20px", paddingBottom:"16px"}}>
                         <p>Open</p>

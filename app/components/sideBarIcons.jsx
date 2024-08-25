@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import SideBarContent from './SideBarContent';
 
 
-export default function SideBarIcons() {
+export default function SideBarIcons({displayStatus, setDisplayStatus}) {
     const [iconId, setIconId] = useState("1");
   useEffect(() => {
     // Dynamically import Bootstrap's JS to ensure it's loaded
@@ -25,7 +25,7 @@ export default function SideBarIcons() {
   }, []);
   let count = 0;
   const [IsActive, setIsActive] = useState(false);
-  const [displayStatus, setDisplayStatus] = useState("d-flex");
+
   const handleClick = (e) => {
     setIconId(e.target.id);
     
