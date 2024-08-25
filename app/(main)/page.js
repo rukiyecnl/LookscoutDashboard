@@ -7,16 +7,23 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Content from "../components/Content";
 import SideBarContent from "../components/SideBarContent";
 import { useEffect, useState } from "react";
+import { UseTheme } from "../store/context";
 
 export default function Home() {
+  const {theme, setTheme} = UseTheme();
   const [displayStatus, setDisplayStatus] = useState("d-none");
 
   useEffect(() => {
+    
+    setTheme("light-mode");
+    document.body.className = theme; 
+
+
     const handleResize = () => {
       if (window.innerWidth <= 990) {
         setDisplayStatus("d-none");
       } else {
-        setDisplayStatus(""); // Eğer d-none yerine başka bir değer kullanmak istiyorsanız burayı ayarlayın
+        setDisplayStatus("d-flex"); // Eğer d-none yerine başka bir değer kullanmak istiyorsanız burayı ayarlayın
       }
     };
 

@@ -13,7 +13,7 @@ export default function SideBarContent({ iconId, displayStatus, handleContentBtn
 
 
     return (
-        <div className={`${displayStatus} flex-column justify-content-between side-bar-content side-bar-special`} style={{width:"320px", flexShrink: "0"}} id="v-pills-tabContent" >
+        <div className={`${displayStatus} flex-column justify-content-between side-bar-content side-bar-special`} style={{width:"320px"}} id="v-pills-tabContent" >
             <div>
                 <div className="d-flex align-items-center gap-2" onClick={handleContentBtn}>
                     <img style={{"width": "11px", "height": "10px"}} src="./arrow.png"  alt="arrow" />
