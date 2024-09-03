@@ -11,8 +11,8 @@ export default function Card(){
             {data.map( (data,index) => {
                 const classValue = data.type.toLowerCase() === "new" ? "online" : data.type.toLowerCase() === "global" ? "failed" : data.type.toLowerCase() === "intuitive" ? "done" : " ";
                 return (
-                    <div key={index} className=" col-12 col-xl-4 col-lg-6 col-sm-6 mb-3">
-                        <div className='price-card'>
+                    <div key={index} className="col" >
+                        <div className='price-card mt-3'>
                             <div className="d-flex align-items-center justify-content-between">
                                 <p style={{marginBottom:"0px"}} className='price-card-title'>{data.name}</p>
                                 <a href="#"><img src="./Dropdown.png" alt="" /></a>
