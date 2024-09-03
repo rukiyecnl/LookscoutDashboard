@@ -1,19 +1,19 @@
 import data from "@/data/data.json"; // JSON dosyasını import edin
 import "../customCss/custom.css";
 
-export default function SideBarContent({ iconId, displayStatus, handleContentBtn}) {
+export default function SideBarContent({ iconId, displayStatus, setDisplayStatus, handleContentBtn}) {
     // iconId ile eşleşen veriyi bulun
     const contentData = data.find(d => d.id == iconId);
     // console.log(contentData);
     
     if (!contentData) {
-        return <div>Content not found</div>;
+        return " ";
     }
 
 
 
     return (
-        <div className={`${displayStatus} flex-column justify-content-between side-bar-content side-bar-special`} style={{width:"320px"}} id="v-pills-tabContent" >
+        <div className={`${displayStatus} flex-column justify-content-between side-bar-content side-bar-special`} style={{width:"272px", overflow:"auto"}} id="v-pills-tabContent" >
             <div>
                 <div className="d-flex align-items-center gap-2" onClick={handleContentBtn}>
                     <img style={{"width": "11px", "height": "10px"}} src="./arrow.png"  alt="arrow" />
@@ -39,7 +39,7 @@ export default function SideBarContent({ iconId, displayStatus, handleContentBtn
             <div>
                 <div className="d-flex gap-3 align-items-center">
                     <img src="./Avatar.png" alt="" />
-                    <p style={{flex: "1", marginBottom:"0px"}}>Brian Ford</p>
+                    <p style={{flex: "1", marginBottom:"0px", color:"var(--title-color)"}}>Brian Ford</p>
                     <img src="./points.png" alt="" />
                 </div>
                 <div className="card" style={{width: "100%", marginTop:"32px"}}>

@@ -16,18 +16,13 @@ import { UseTheme } from "../store/context";
 export default function Home() {
   const {theme, setTheme} = UseTheme();
   const [displayStatus, setDisplayStatus] = useState("d-none");
-
-
   useEffect(() => {
     if (typeof window !== "undefined") {
-      document.body.className = theme;
 
       const handleResize = () => {
         if (window.innerWidth <= 990) {
           setDisplayStatus("d-none");
-        } else {
-          setDisplayStatus("d-flex");
-        }
+        } 
       };
 
       handleResize(); // Component ilk yüklendiğinde boyutu kontrol et
@@ -38,17 +33,39 @@ export default function Home() {
         window.removeEventListener("resize", handleResize);
       };
     }
-  }, [theme]);
+  },[])
 
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      document.body.className = theme;
+
+      // const handleResize = () => {
+      //   if (window.innerWidth <= 990) {
+      //     setDisplayStatus("d-none");
+      //   } else {
+      //     setDisplayStatus("d-flex");
+      //   }
+      // };
+
+      // handleResize(); // Component ilk yüklendiğinde boyutu kontrol et
+
+      // window.addEventListener("resize", handleResize);
+
+      // return () => {
+      //   window.removeEventListener("resize", handleResize);
+      // };
+    }
+  }, [theme]);
 
 
   return (
     <div className="container-custom">
-      <div className="d-flex justify-content-center">
+      <div className="d-flex">
         <div className="d-none d-lg-flex "  >
           <SideBarIcons displayStatus={displayStatus} setDisplayStatus={setDisplayStatus}/>
         </div>
-        <div className="" style={{width: `${displayStatus=="d-none" ? "100%" : "72%"}`}} >
+        <div className="" style={{ height:"100vh", overflow:"auto", flexGrow: "1"}} >
           <Content />
         </div>
       </div>

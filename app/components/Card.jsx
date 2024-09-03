@@ -9,7 +9,7 @@ export default function Card(){
     return (
         <div className='row align-items-center gap-md-0 gap-sx-2' style={{marginBlock: "32px"}}>
             {data.map( (data,index) => {
-                const classValue = data.type === "new" ? "online" : data.type === "global" ? "failed" : data.type === "intuitive" ? "done" : " ";
+                const classValue = data.type.toLowerCase() === "new" ? "online" : data.type.toLowerCase() === "global" ? "failed" : data.type.toLowerCase() === "intuitive" ? "done" : " ";
                 return (
                     <div key={index} className=" col-12 col-xl-4 col-lg-6 col-sm-6 mb-3">
                         <div className='price-card'>

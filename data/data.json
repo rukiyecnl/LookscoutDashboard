@@ -3,34 +3,7 @@
         "id": "1",
         "name": "horizontal",
         "values": [
-            {
-                "val":"General",
-                "img":"./horizontalBlack.png"
-            },
-            {
-                "val":"Messages",
-                "img":"./message.png"
-            },
-            {
-                "val":"Notification",
-                "img":"./alarm.png"
-            },
-            {
-                "val":"Users",
-                "img":"./circle.png"
-            },
-            {
-                "val":"Events & Logs",
-                "img":"./star.png"
-            },
-            {
-                "val":"Organization",
-                "img":"./bank.png"
-            },
-            {
-                "val":"Teams",
-                "img":"./teams.png"
-            }
+            
         ],
         "classValues": "tab-pane fade",
         "idValues": "v-pills-home",
@@ -41,32 +14,9 @@
     },
     {
         "id": "2",
-        "name": "horizontal",
+        "name": "değiş",
         "values": [
-            {
-                "val":"Messages",
-                "img":"./message.png"
-            },
-            {
-                "val":"Notification",
-                "img":"./alarm.png"
-            },
-            {
-                "val":"Users",
-                "img":"./circle.png"
-            },
-            {
-                "val":"Events & Logs",
-                "img":"./star.png"
-            },
-            {
-                "val":"Organization",
-                "img":"./bank.png"
-            },
-            {
-                "val":"Teams",
-                "img":"./teams.png"
-            }
+            
         ],
         "classValues": "tab-pane fade",
         "idValues": "v-pills-profile",
@@ -75,8 +25,17 @@
         "tabIndex": 0
     },     {
         "id": "3",
-        "name": "horizontal",
+        "name": "Dashboard",
+        "thumbnailImg": "./horizontal.png",
         "values": [
+            {
+                "val":"General",
+                "img":"./horizontalBlack.png"
+            },
+            {
+                "val":"Messages",
+                "img":"./message.png"
+            },
             {
                 "val":"Notification",
                 "img":"./alarm.png"
@@ -106,23 +65,24 @@
     },
     {
         "id": "4",
-        "name": "horizontal",
+        "name": "Date",
+        "thumbnailImg": "./calendar.png",
         "values": [
             {
-                "val":"Users",
-                "img":"./circle.png"
+                "val":"Monthly View",
+                "img":""
             },
             {
-                "val":"Events & Logs",
-                "img":"./star.png"
+                "val":"Weekly Outlook",
+                "img":""
             },
             {
-                "val":"Organization",
-                "img":"./bank.png"
+                "val":"Daily View",
+                "img":""
             },
             {
-                "val":"Teams",
-                "img":"./teams.png"
+                "val":"Events",
+                "img":""
             }
         ],
         "classValues": "tab-pane fade",
@@ -133,27 +93,20 @@
     },
     {
         "id": "5",
-        "name": "horizontal",
+        "name": "Attempt",
+        "thumbnailImg": "./alt.png",
         "values": [
             {
-                "val":"General",
-                "img":"./horizontalBlack.png"
+                "val":"Bar Charts",
+                "img":""
             },
             {
-                "val":"Messages",
-                "img":"./message.png"
+                "val":"Sales Data",
+                "img":""
             },
             {
-                "val":"Notification",
-                "img":"./alarm.png"
-            },
-            {
-                "val":"Users",
-                "img":"./circle.png"
-            },
-            {
-                "val":"Events & Logs",
-                "img":"./star.png"
+                "val":"Performance Metrics",
+                "img":""
             }
         ],
         "classValues": "tab-pane fade",
@@ -161,5 +114,47 @@
         "role": "tabpanel",
         "ariaLabelledby": "v-pills-profile2-tab",
         "tabIndex": 0
+    },
+    {
+        "id": "6",
+        "name": "Settings",
+        "thumbnailImg": "./settings.png",
+        "values": [
+            {
+                "val":"Account Settings",
+                "img":""
+            },
+            {
+                "val":"Privacy Settings",
+                "img":""
+            },
+            {
+                "val":"Notification Settings",
+                "img":""
+            },
+            {
+                "val":"Language & Region",
+                "img":""
+            }
+        ],
+        "classValues": "tab-pane fade",
+        "idValues": "v-pills-profile2",
+        "role": "tabpanel",
+        "ariaLabelledby": "v-pills-profile2-tab",
+        "tabIndex": 0
+    },
+    {
+        "id": "7",
+        "name": "Out",
+        "thumbnailImg": "./exit.png",
+        "values": [
+           
+        ],
+        "classValues": "tab-pane fade",
+        "idValues": "v-pills-profile2",
+        "role": "tabpanel",
+        "ariaLabelledby": "v-pills-profile2-tab",
+        "tabIndex": 0
     }
+
 ]

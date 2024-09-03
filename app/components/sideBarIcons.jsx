@@ -1,86 +1,91 @@
 "use client";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import "../customCss/custom.css"
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import SideBarContent from './SideBarContent';
 import { UseTheme } from '../store/context';
+import ThemeBtn from './ThemeBtn';
 
+export default function SideBarIcons({ displayStatus, setDisplayStatus }) {
+    const {theme ,setTheme} = UseTheme();
+    const [activeIconId, setActiveIconId] = useState(null); 
 
-export default function SideBarIcons({displayStatus, setDisplayStatus}) {
-    const {theme} = UseTheme();
-    const [iconId, setIconId] = useState("1");
-  useEffect(() => {
-    // Dynamically import Bootstrap's JS to ensure it's loaded
-    // import('bootstrap/dist/js/bootstrap.bundle.min.js').then(() => {
-    //   const triggerTabList = document.querySelectorAll('#myTab button');
-    //   triggerTabList.forEach((triggerEl) => {
-    //     if (window.bootstrap) {
-    //       const tabTrigger = new window.bootstrap.Tab(triggerEl);
-
-    //       triggerEl.addEventListener('click', (event) => {
-    //         event.preventDefault();
-    //         tabTrigger.show();
-    //       });
-    //     }
-    //   });
-    // });
-  }, []);
-  let count = 0;
-  const [IsActive, setIsActive] = useState(false);
-
-  const handleClick = (e) => {
-    setIconId(e.target.id);
-    
-    const val = [1,2,3,4,5].find(n => n == parseInt(iconId));
-    if (val) {
-        count++;
-        setIsActive(true);   
+    const handleClick = (e) => {
+        const id = e.target.id;
+        setActiveIconId(id); 
+        setDisplayStatus("d-flex");
     }
-    if (count > 1) {
-        setIsActive(false);
+    const handleClickLogo = (e) => {
+        
+        const id = e.target.id;
+        setActiveIconId(id); 
+        setDisplayStatus(prevState  => {
+            
+            const deneme2 = prevState  === "d-none" ? "d-flex" : "d-none";
+            return deneme2;
+        });
     }
-    setDisplayStatus("d-flex");
 
-  }
+    const handleContentBtn = () => {
+        setDisplayStatus("d-none");
+    }
 
-  const handleContentBtn = () => {
-    //   const status = displayStatus == "d-flex" ?  "d-none" : "d-flex";
-      setDisplayStatus("d-none");
-  }
-
-
-  return (
-<div className="d-flex flex-column h-100 " style={{maxWidth:"100%"}}>
-    <div className="d-flex h-100 " >
-        <div className='d-flex align-items-center flex-column justify-content-between side-bar-content px-3' style={{paddingBlock:"18px"}}>
-            <div className="nav flex-column nav-pills  " style={{"gap":"16px"}} id="" role="tablist" aria-orientation="vertical">
-                <button className={IsActive ? `nav-link active` : `nav-link`} id="1" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" onClick={(e) => handleClick(e)} >
-                    <img id='1' src={theme == "light-mode" ? "./logo.png" : "./logoWhite.png"} className='iconImage' alt="logo"  />
-                </button>
-                <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">
-                    <img id='2' src="./search.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)} />
-                </button>
-                <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-profile2" type="button" role="tab" aria-controls="v-pills-profile2" aria-selected="false">
-                    <img id='3' src="./horizontal.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)} />
-                </button>
-                <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">
-                    <img id='4' src="./calendar.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)}/>
-                </button>
-                <button className="nav-link" id="" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">
-                    <img id='5' src="./alt.png" className='iconImage' alt="logo" onClick={(e) => handleClick(e)} />
-                </button>
+    return (
+        <div className="d-none d-lg-flex flex-column" style={{ maxWidth: "100%", height: "100vh" }}>
+            <div className="d-flex h-100 ">
+                <div className='d-flex align-items-center flex-column justify-content-between side-bar-content px-3' style={{ paddingBlock: "18px" }}>
+                    <div className="nav flex-column nav-pills" style={{ "gap": "16px" }} id="" role="tablist" aria-orientation="vertical">
+                        <button
+                            className={activeIconId === "1" ? `nav-link active2` : `nav-link`} 
+                            id="1"
+                            onClick={(e) => handleClickLogo(e)}
+                        >
+                            <img id='1' src={theme === "light-mode" ? "./logo.png" : "./logoWhite.png"} className='iconImage' alt="logo" />
+                        </button>
+                        <button
+                            className={activeIconId === "2" ? `nav-link active2` : `nav-link`}
+                            id="2"
+                            onClick={(e) => handleClick(e)}
+                        >
+                            <img id='2' src="./search.png" className='iconImage' alt="logo" />
+                        </button>
+                        <button
+                            className={activeIconId === "3" ? `nav-link active2` : `nav-link`}
+                            id="3"
+                            onClick={(e) => handleClick(e)}
+                        >
+                            <img id='3' src="./horizontal.png" className='iconImage' alt="logo" />
+                        </button>
+                        <button
+                            className={activeIconId === "4" ? `nav-link active2` : `nav-link`}
+                            id="4"
+                            onClick={(e) => handleClick(e)}
+                        >
+                            <img id='4' src="./calendar.png" className='iconImage' alt="logo" />
+                        </button>
+                        <button
+                            className={activeIconId === "5" ? `nav-link active2` : `nav-link`}
+                            id="5"
+                            onClick={(e) => handleClick(e)}
+                        >
+                            <img id='5' src="./alt.png" className='iconImage' alt="logo" />
+                        </button>
+                    </div>
+                    <div className=' nav nav-pills d-flex flex-column' style={{ "gap": "16px" }}>
+                        <ThemeBtn />
+                        <button
+                            className={activeIconId === "6" ? `nav-link active2` : `nav-link`}
+                            id="6"
+                            onClick={(e) => handleClick(e)}>
+                            <img id="6" src="./settings.png" alt="settings" className='iconImage' />
+                        </button>
+                        <button className='nav-link' onClick={(e) => handleClick(e)}>
+                            <img src="./exit.png" alt="exit" className='iconImage' />
+                        </button>
+                    </div>
+                </div>
+                <SideBarContent iconId={activeIconId} displayStatus={displayStatus} setDisplayStatus={setDisplayStatus} handleContentBtn={handleContentBtn} />
             </div>
-            <div className='d-flex flex-column' style={{"gap":"16px"}}>
-                <img src="./settings.png" alt="settings"  className='iconImage'/>
-                <img src="./exit.png" alt="exit"  className='iconImage'/>
-
-            </div>
-
         </div>
-        <SideBarContent iconId = {iconId} displayStatus={displayStatus} handleContentBtn={handleContentBtn} />
-
-    </div>
-
-</div>
-  );
+    );
 }

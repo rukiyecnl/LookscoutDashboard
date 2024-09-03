@@ -3,7 +3,7 @@
         "id":1,
         "name":"Revenue",
         "price":390,
-        "type":"new",
+        "type":"New",
         "text": "monthly growth",
         "img": "./revenue.png"
     },
@@ -11,7 +11,7 @@
         "id":2,
         "name":"Expenses",
         "price":680,
-        "type":"global",
+        "type":"Global",
         "text": "monthly growth",
         "img": "./expenses.png"
     },
@@ -19,7 +19,7 @@
         "id":3,
         "name":"Expenses",
         "price":680,
-        "type":"intuitive",
+        "type":"Intuitive",
         "text": "monthly growth",
         "img": "./expensesIN.png"
     }
