@@ -15,12 +15,12 @@ export default function SideBarContent({ iconId, displayStatus, setDisplayStatus
     return (
         <div className={`${displayStatus} flex-column justify-content-between side-bar-content side-bar-special`} style={{width:"272px", overflow:"auto"}} id="v-pills-tabContent" >
             <div>
-                <div className="d-flex align-items-center gap-2" onClick={handleContentBtn}>
+                <div className="d-flex align-items-center gap-2 px-4" onClick={handleContentBtn}>
                     <img style={{"width": "11px", "height": "10px"}} src="./arrow.png"  alt="arrow" />
                     <p className="lookscoutTitle">Lookscout Dashboard</p>
                 </div>
                 <div>
-                    <form className="w-100">
+                    <form className="w-100 px-4">
                         <input className="w-100" type="text" placeholder="Search here..." style={{marginBlock:"32px", padding:"10px 12px 10px 12px", borderRadius:"5px", border: "2px solid var(--border-color)", backgroundColor:"var(--btn-color-bg)"}}/>
                     </form>
                 </div>
@@ -28,7 +28,7 @@ export default function SideBarContent({ iconId, displayStatus, setDisplayStatus
                     
                     {
                         contentData.values.map((value, index) => (
-                            <div key={index} className="d-flex gap-2 show active" style={{paddingBlock:"12px"}}>
+                            <div key={index} className="d-flex gap-2 show active sidebar-left px-4" style={{paddingBlock:"12px"}}>
                                 <img src={value.img} alt="" />
                                 <div className="side-bar-content-title">{value.val}</div>
                             </div>
@@ -36,8 +36,8 @@ export default function SideBarContent({ iconId, displayStatus, setDisplayStatus
                     }
                 </div>
             </div>
-            <div>
-                <div className="d-flex gap-3 align-items-center">
+            <div className="px-4">
+                <div className="d-flex gap-3 align-items-center my-4">
                     <img src="./Avatar.png" alt="" />
                     <p style={{flex: "1", marginBottom:"0px", color:"var(--title-color)"}}>Brian Ford</p>
                     <img src="./points.png" alt="" />

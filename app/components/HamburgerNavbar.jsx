@@ -48,8 +48,8 @@ export default function HamburgerNavbar() {
                                 {contentData.map((data, index) => {
                                     if (data.id > 2) {
                                         return (
-                                            <div key={`item-${index}`}>
-                                                <a className="btn btn-toggle" href="#" role="button" 
+                                            <div key={`item-${index}`} className="">
+                                                <a className="btn btn-toggle side-right-content" href="#" role="button" 
                                                     data-bs-toggle="collapse" 
                                                     aria-expanded="false" 
                                                     data-bs-target={`#item2-${index}`}
@@ -63,9 +63,9 @@ export default function HamburgerNavbar() {
                                                         <img src="./downArrow.svg" alt="arrow" />
                                                     </div>
                                                 </a>
-                                                <div id={`item2-${index}`} className="collapse ps-5 alt-drop gap-3" data-bs-parent="#accordionExample">
+                                                <div id={`item2-${index}`} className="collapse ps-5 alt-drop gap-3 " data-bs-parent="#accordionExample">
                                                     {data.values.map((value, index) => (
-                                                        <div key={index} className="dropdown-item d-flex flex-row gap-2 py-2">
+                                                        <div key={index} className="dropdown-item d-flex flex-row gap-2 py-2 side-right-content">
                                                             <img src={value.img} alt="" />
                                                             {value.val}
                                                         </div>

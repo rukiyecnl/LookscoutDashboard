@@ -20,6 +20,13 @@ body {
     background-color: var(--hover-bg);
 
 }
+.sidebar-left:hover{
+    background-color: var(--hover-bg);
+    border-left: 3px solid var(--hover-border-color);
+    & > div {
+        color: var(--text-hover-color);
+    }
+}
 .active2 {
     background-color: var(--hover-bg);
 }
@@ -41,7 +48,7 @@ body {
 
 }
 .side-bar-special {
-    padding: 28px;
+    padding-block: 28px;
     border: 1px solid var(--border-color) ;
 }
 .side-bar-content-title {
@@ -340,4 +347,9 @@ p {
 .side-right {
     background-color: var(--side-bar-bg);
     color: var(--text-color);
+}
+
+.side-right-content:hover {
+    background-color: var(--hover-bg);
+    border-right: 3px solid var(--hover-border-color);
 }

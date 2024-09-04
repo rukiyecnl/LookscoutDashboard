@@ -16,6 +16,8 @@
     --btn-status-global-bg: #FFF2F0;
     --btn-status-global-color: #E2341D;
     --hover-bg: #f3f9fe;
+    --text-hover-color: #5F6D7E;
+    --hover-border-color: #437EF7;
 
   }
   
@@ -32,7 +34,8 @@
     --btn-status-global-bg: #FFF2F0;
     --btn-status-global-color: #E2341D;
     --hover-bg: #f3f9fe;
-
+    --text-hover-color: #5F6D7E;
+    --hover-border-color: #437EF7;
   }
   
   .dark-mode {
@@ -48,7 +51,8 @@
     --btn-status-global-bg: #E2341D;
     --btn-status-global-color: #FFF2F0;
     --hover-bg: #2C3444;
-    
+    --text-hover-color: #fff;
+    --hover-border-color: #fff;
   }
   
   body {
