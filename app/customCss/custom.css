@@ -20,6 +20,9 @@ body {
     background-color: var(--hover-bg);
 
 }
+.sidebar-left{
+    border-left: 3px solid transparent;
+}
 .sidebar-left:hover{
     background-color: var(--hover-bg);
     border-left: 3px solid var(--hover-border-color);
@@ -348,7 +351,9 @@ p {
     background-color: var(--side-bar-bg);
     color: var(--text-color);
 }
-
+.side-right-content {
+    border-right: 3px solid transparent;
+}
 .side-right-content:hover {
     background-color: var(--hover-bg);
     border-right: 3px solid var(--hover-border-color);
