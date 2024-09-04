@@ -16,45 +16,14 @@ import { UseTheme } from "../store/context";
 export default function Home() {
   const {theme, setTheme} = UseTheme();
   const [displayStatus, setDisplayStatus] = useState("d-none");
+  
   useEffect(() => {
-    if (typeof window !== "undefined") {
-
-      const handleResize = () => {
-        if (window.innerWidth <= 990) {
-          setDisplayStatus("d-none");
-        } 
-      };
-
-      handleResize(); // Component ilk yüklendiğinde boyutu kontrol et
-
-      window.addEventListener("resize", handleResize);
-
-      return () => {
-        window.removeEventListener("resize", handleResize);
-      };
-    }
-  },[])
-
+    import('bootstrap/dist/js/bootstrap.bundle.min.js');
+}, []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
       document.body.className = theme;
-
-      // const handleResize = () => {
-      //   if (window.innerWidth <= 990) {
-      //     setDisplayStatus("d-none");
-      //   } else {
-      //     setDisplayStatus("d-flex");
-      //   }
-      // };
-
-      // handleResize(); // Component ilk yüklendiğinde boyutu kontrol et
-
-      // window.addEventListener("resize", handleResize);
-
-      // return () => {
-      //   window.removeEventListener("resize", handleResize);
-      // };
     }
   }, [theme]);
 
